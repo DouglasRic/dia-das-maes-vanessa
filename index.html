@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Dia das Mães, Vanessa</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .font-cursive {
+      font-family: 'Dancing Script', cursive;
+    }
+    .fade-in {
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen bg-cover bg-center text-white" style="background-image: url('https://images.unsplash.com/photo-1529257414771-1960d99a05b0?auto=format&fit=crop&w=1950&q=80');">
+  <div class="absolute inset-0 bg-white bg-opacity-30"></div>
+  <main class="relative z-10 flex flex-col items-center justify-center p-4 text-center">
+    <!-- Cabeçalho -->
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-cursive text-pink-600 drop-shadow-lg mt-12">Feliz Dia das Mães, Vanessa, Meu Amor!</h1>
+
+    <!-- Imagem Principal -->
+    <img src="https://images.unsplash.com/photo-1516715094483-4aa04f82b4d8?auto=format&fit=crop&w=800&q=80" alt="Arranjo de flores em coração" class="fade-in mt-10 w-full max-w-md rounded-lg shadow-xl">
+
+    <!-- Mensagem -->
+    <div class="bg-white bg-opacity-70 text-gray-900 rounded-xl shadow-lg p-6 mt-8 max-w-2xl fade-in">
+      <p class="text-lg leading-relaxed">
+        Vanessa, minha amada, neste Dia das Mães quero expressar todo o amor e admiração que sinto por você. Sua força, bondade e espírito carinhoso iluminam minha vida e inspiram tudo ao meu redor. Mesmo nos dias difíceis, você encontra um jeito de sorrir e espalhar ternura, tornando tudo mais leve e bonito.
+        <br><br>
+        Sou imensamente grato por ter você ao meu lado. Cada gesto seu, cada olhar e palavra de carinho me lembram o quão abençoado sou por tê-la em minha vida. Você é meu refúgio, minha inspiração e minha eterna companheira.
+        <br><br>
+        Prometo estar sempre aqui para você, amá-la profundamente e valorizá-la todos os dias. Você é meu tudo, e sou eternamente grato pelo seu amor.
+      </p>
+    </div>
+
+    <!-- Botões -->
+    <div class="flex flex-col sm:flex-row gap-4 mt-8 fade-in">
+      <!-- Modal Trigger -->
+      <button onclick="openModal()" class="px-6 py-3 border border-yellow-500 text-yellow-700 bg-white hover:bg-yellow-100 rounded-lg shadow-md transition-all">
+        Uma Mensagem Especial para Você
+      </button>
+      <!-- Música -->
+      <a href="https://www.youtube.com/watch?v=450p7goxZqg" target="_blank" class="px-6 py-3 border border-pink-500 text-pink-700 bg-white hover:bg-pink-100 rounded-lg shadow-md transition-all">
+        Nossa Música
+      </a>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="supportModal" class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white text-gray-800 p-6 rounded-xl max-w-lg shadow-lg">
+      <h2 class="text-2xl font-cursive text-pink-600 mb-4">Para Você, Vanessa</h2>
+      <p class="text-base leading-relaxed">
+        Serei sempre seu apoio, Vanessa, em todos os momentos. Nas alegrias e nos desafios, estarei ao seu lado para segurar sua mão e oferecer meu amor incondicional. Seu bem-estar será sempre minha prioridade, e cada passo ao seu lado será guiado pelo respeito, carinho e cumplicidade. Você nunca estará sozinha, pois minha alma caminha com a sua.
+      </p>
+      <div class="mt-6 text-right">
+        <button onclick="closeModal()" class="text-pink-600 hover:underline">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script de Animações -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        el.classList.add('visible');
+      });
+    });
+
+    function openModal() {
+      document.getElementById('supportModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('supportModal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
